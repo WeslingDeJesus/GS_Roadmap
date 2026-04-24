@@ -1,0 +1,56 @@
+[
+    {
+        "id": "atlas",
+        "logoName": "ATLAS",
+        "title": "Seguimiento avanzado de metas",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+        "coverImage": "/covers/atlas.png",
+        "exploreUrl": "https://example.com/atlas",
+        "theme": {
+            "background": "#7db2c3",
+            "accent": "#af0f1b",
+            "onBackground": "#FFFFFF",
+            "onSurface": "#14404d",
+            "buttonBg": "#af0f1b",
+            "buttonText": "#FFFFFF",
+            "logoBg": "#7db2c3",
+            "logoText": "#FFFFFF"
+        }
+    },
+    {
+        "id": "inside",
+        "logoName": "INSIDE",
+        "title": "Nuevo diseño de nuestra página web",
+        "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.",
+        "coverImage": "/covers/inside.png",
+        "exploreUrl": "https://example.com/inside",
+        "theme": {
+            "background": "#af0f1b",
+            "accent": "#f27d39",
+            "onBackground": "#FFFFFF",
+            "onSurface": "#5a0810",
+            "buttonBg": "#f27d39",
+            "buttonText": "#FFFFFF",
+            "logoBg": "#af0f1b",
+            "logoText": "#FFFFFF"
+        }
+    },
+    {
+        "id": "gs",
+        "logoName": "GENERAL DE SEGUROS",
+        "title": "Blindamos tu seguridad",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis. Proin viverra risus a eros volutpat tempor. In quis arcu et eros porta lobortis sit amet at magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae ante vitae, ultricies rhoncus sapien. Nam tristique, mauris a dignissim tempus, leo eros suscipit lorem, ac viverra nulla urna sit amet urna. Etiam sit amet hendrerit nisi, et luctus sem. Proin eget neque a urna hendrerit interdum. Duis placerat cursus bibendum. Donec sed dictum urna, ac venenatis mi. Integer sodales sit amet urna a vehicula.",
+        "coverImage": "/covers/gs.png",
+        "exploreUrl": "https://example.com/gs",
+        "theme": {
+            "background": "#f27d39",
+            "accent": "#af0f1b",
+            "onBackground": "#FFFFFF",
+            "onSurface": "#5a2414",
+            "buttonBg": "#af0f1b",
+            "buttonText": "#FFFFFF",
+            "logoBg": "#f27d39",
+            "logoText": "#FFFFFF"
+        }
+    }
+]
