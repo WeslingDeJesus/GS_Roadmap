@@ -1,0 +1,217 @@
+/* Vertical Infinite Scroll Animation */
+@keyframes verticalScroll {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes horizontalScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.carousel-container {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  /* Spacing between logos */
+  animation: verticalScroll 25s linear infinite;
+}
+
+
+
+.logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 150px;
+  /* Approximate height of each logo container */
+  padding: 1rem;
+}
+
+.logo-item img {
+  max-width: 325px;
+  /* 250 * 1.3 */
+  max-height: 130px;
+  /* 100 * 1.3 */
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-item:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Shadows for the carousel edges */
+.carousel-container::before,
+.carousel-container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.carousel-container::before {
+  top: 0;
+  background: linear-gradient(to bottom, white 0%, transparent 100%);
+}
+
+.carousel-container::after {
+  bottom: 0;
+  background: linear-gradient(to top, white 0%, transparent 100%);
+}
+
+.home-container {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-header {
+  padding: 1.5rem 4rem;
+  background: white;
+  position: relative;
+  z-index: 30;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  /* Shadow at bottom */
+  display: flex;
+  align-items: center;
+}
+
+.home-footer {
+  height: 60px;
+  background: white;
+  position: relative;
+  z-index: 30;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+  /* Shadow at top */
+}
+
+.home-main {
+  flex: 1;
+  display: flex;
+  padding: 0 4rem;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.content-left {
+  flex: 1;
+  max-width: 600px;
+  z-index: 10;
+}
+
+.content-right {
+  flex: 1;
+  height: calc(100vh - 150px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.conoce-mas-btn {
+  background-color: #E66B27;
+  color: white;
+  font-weight: 700;
+  padding: 1rem 2.5rem;
+  border-radius: 9999px;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.conoce-mas-btn:hover {
+  background-color: #c95b1f;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.conoce-mas-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .home-main {
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .content-right {
+    width: 100%;
+    height: 250px; /* Reduced height for horizontal layout */
+    margin-top: 2rem;
+    justify-content: center;
+  }
+
+  .carousel-track {
+    flex-direction: row;
+    animation: horizontalScroll 25s linear infinite;
+    width: max-content;
+    height: 100%;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .logo-item {
+    width: 250px; /* Fixed width for horizontal flow */
+    height: 100%;
+  }
+
+  .logo-item img {
+    max-width: 200px;
+    max-height: 100px;
+  }
+
+  /* Adjust shadows for horizontal edges */
+  .carousel-container::before,
+  .carousel-container::after {
+    width: 100px;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+  }
+
+  .carousel-container::before {
+    left: 0;
+    right: auto;
+    background: linear-gradient(to right, white 0%, transparent 100%);
+  }
+
+  .carousel-container::after {
+    right: 0;
+    left: auto;
+    background: linear-gradient(to left, white 0%, transparent 100%);
+  }
+
+  .home-header {
+    padding: 1.5rem 2rem;
+  }
+}

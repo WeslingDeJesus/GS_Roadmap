@@ -45,6 +45,29 @@ body,
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* ---------- Custom scrollbar for grid ---------- */
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
 /* ---------- Splash screen ---------- */
 .splash-root {
     position: fixed;
@@ -190,4 +213,13 @@ body,
     .splash-root::after {
         animation: none;
     }
+}
+/* ---------- Screen Transitions ---------- */
+.screen-fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
