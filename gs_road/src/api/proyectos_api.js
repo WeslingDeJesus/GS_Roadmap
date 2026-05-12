@@ -7,7 +7,7 @@ export const getProyectos = async () => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ limit: 1000 }) // Aumentamos el límite para traer todos los proyectos
+            body: JSON.stringify({ limit: 10000 }) // Aumentamos el límite para traer todos los proyectos
         });
         if (!response.ok) {
             throw new Error(`Error HTTP: ${response.status}`);

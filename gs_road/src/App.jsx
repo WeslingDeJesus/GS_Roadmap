@@ -19,12 +19,9 @@ export default function App() {
   useEffect(() => {
     const fetchProyectos = async () => {
       try {
-        console.log("Fetching projects from:", import.meta.env.VITE_API_URL);
         const response = await getProyectos()
-        console.log("API Response:", response);
         // La API devuelve los datos dentro de la propiedad "data"
         const projectArray = response.data || []
-        console.log("Project array length:", projectArray.length);
 
         // Map the API data to the format expected by the Slide component
         // 1. Mapear cada hito con sus campos normalizados
@@ -37,8 +34,8 @@ export default function App() {
           const tieneLogo = Number(item.tieneLogo) === 1 || item.tieneLogo === true || item.tieneLogo === "1";
 
           const logoUrl = tieneLogo
-            ? `http://localhost:1003/files/rmp_plataforma/logoBase/${item.rmp_plataforma}/${item.logoBase || 'logoBase.png'}`
-            : `http://localhost:1003/files/rmp_proyecto/logo/${item.id_proyecto || item.id}/${item.logo || 'logo.png'}`;
+            ? `${import.meta.env.VITE_API_URL}/files/rmp_plataforma/logoBase/${item.rmp_plataforma}/${item.logoBase || 'logoBase.png'}`
+            : `${import.meta.env.VITE_API_URL}/files/rmp_proyecto/logo/${item.id_proyecto || item.id}/${item.logo || 'logo.png'}`;
 
           const logoSource = tieneLogo ? (item.logoBase || 'logoBase.png') : (item.logo || 'logo.png');
 
@@ -47,7 +44,7 @@ export default function App() {
             id: item.id || `slide-${idx}`,
             title: item.nombre || 'Proyecto sin título',
             description: item.descripcion_lg || item.descripcion_ct || 'Sin descripción',
-            coverImage: `http://localhost:1003/files/rmp_hitos/portada/${item.id}/portada.png`,
+            coverImage: `${import.meta.env.VITE_API_URL}/files/rmp_hitos/portada/${item.id}/portada.png`,
             exploreUrl: item.link || '#',
             logoName: getPlatformName(plataforma, item.plataforma) || logoSource || plataforma,
             logoUrl: logoUrl,
