@@ -93,7 +93,7 @@ export default function DocMode({ slides, onBack, onGoToBlog }) {
       >
         {/* Sidebar Header (Mobile) */}
         <div className="lg:hidden p-6 flex items-center justify-between border-b border-gray-100">
-          <img src="/logos/gs_roadmap.png" alt="Logo" className="h-8 object-contain brightness-0" />
+          <img src="logos/gs_roadmap.png" alt="Logo" className="h-8 object-contain brightness-0" />
           <button onClick={() => setIsSidebarOpen(false)} className="text-gray-400">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
           </button>
@@ -157,7 +157,7 @@ export default function DocMode({ slides, onBack, onGoToBlog }) {
 
         {/* Footer logo */}
         <div className="p-6 border-t border-gray-100 flex flex-col items-center gap-4">
-          <img src="/logos/gs_roadmap.png" alt="GS Roadmap" className="h-10 object-contain brightness-0" />
+          <img src="logos/gs_roadmap.png" alt="GS Roadmap" className="h-10 object-contain brightness-0" />
           <button
             onClick={onBack}
             className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 hover:text-gray-600 transition-colors"

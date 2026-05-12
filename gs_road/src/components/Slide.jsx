@@ -59,7 +59,7 @@ export default function Slide({
                     className="h-full w-full object-cover object-center lg:object-left select-none"
                     draggable="false"
                     onError={(e) => {
-                        e.target.src = '/fondoDefault.png';
+                        e.target.src = 'fondoDefault.png';
                         e.target.onerror = null;
                     }}
                 />

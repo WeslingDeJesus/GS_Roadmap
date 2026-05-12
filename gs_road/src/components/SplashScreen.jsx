@@ -21,7 +21,7 @@ export default function SplashScreen({ onFinish }) {
             aria-hidden={hiding}
         >
             <img
-                src="/logos/gs_roadmap.png"
+                src="logos/gs_roadmap.png"
                 alt="GS General Roadmap"
                 className="splash-logo"
                 draggable="false"

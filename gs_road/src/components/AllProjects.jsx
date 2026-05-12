@@ -59,7 +59,7 @@ export default function AllProjects({ slides, onSelectSlide, onBack }) {
 
       {/* Logo */}
       <div className="absolute top-4 left-6 lg:top-8 lg:left-10 z-20">
-        <img src="/logos/gs_roadmap.png" alt="General Roadmap" className="h-12 lg:h-16 object-contain" />
+        <img src="logos/gs_roadmap.png" alt="General Roadmap" className="h-12 lg:h-16 object-contain" />
       </div>
 
       {/* Header/Title - Optional if we just want the cards */}

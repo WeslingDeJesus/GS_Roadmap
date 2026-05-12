@@ -2,7 +2,10 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
+// https://vitejs.dev/config/
 export default defineConfig({
+  // Agregamos el base path para que los assets apunten a /comite/assets/
+  base: '/comite/', 
   plugins: [react(), tailwindcss()],
   server: {
     host: '0.0.0.0',
@@ -13,4 +16,9 @@ export default defineConfig({
       clientPort: 443,
     },
   },
+  build: {
+    // Esto asegura que los archivos se generen de forma óptima para producción
+    outDir: 'dist',
+    assetsDir: 'assets',
+  }
 })
