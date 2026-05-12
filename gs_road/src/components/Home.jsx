@@ -19,7 +19,7 @@ export default function Home({ slides = [], onViewDoc }) {
       {/* Header */}
       <header className="home-header">
         <img
-          src="/logos/gs_roadmap.png"
+          src="logos/gs_roadmap.png"
           alt="General Roadmap"
           className="h-10 lg:h-12 object-contain brightness-0"
         />
