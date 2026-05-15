@@ -5,11 +5,11 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vitejs.dev/config/
 export default defineConfig({
   // Agregamos el base path para que los assets apunten a /comite/assets/
-  base: '/comite/', 
+  base: '', 
   plugins: [react(), tailwindcss()],
   server: {
     host: '0.0.0.0',
-    port: 3000,
+    port: 2001,
     strictPort: true,
     allowedHosts: true,
     hmr: {
